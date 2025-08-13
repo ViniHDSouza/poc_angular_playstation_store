@@ -1,32 +1,9 @@
 <div class="home__container">
 	<app-card
-		gameLabel="EXCLUSIVE"
-		gameCover="assets/bt-1.jpg"
-		gamePrice="R$ 199,99"
-		gameType="Digital PS4">
-	</app-card>
-	<app-card
-		gameLabel="PC"
-		gameCover="assets/bt-4.jpg"
-		gamePrice="R$ 399,99"
-		gameType="Digital PS5">
-	</app-card>
-	<app-card
-		gameLabel="DIGITAL"
-		gameCover="assets/bt-5.jpg"
-		gamePrice="R$ 299,99"
-		gameType="Digital PS1">
-	</app-card>
-	<app-card
-		gameLabel="DIGITAL"
-		gameCover="assets/ac-cover.jpg"
-		gamePrice="R$ 299,99"
-		gameType="Digital PS1">
-	</app-card>
-	<app-card
-		gameLabel="DIGITAL"
-		gameCover="assets/bt-hardline.jpg"
-		gamePrice="R$ 299,99"
-		gameType="Digital PS1">
+		*ngFor="let game of games"
+		[gameLabel]="game.gameLabel"
+		[gameCover]="game.gameCover"
+		[gamePrice]="game.gamePrice"
+		[gameType]="game.gameType">
 	</app-card>
 </div>
